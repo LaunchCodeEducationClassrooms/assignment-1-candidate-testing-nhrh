@@ -38,11 +38,11 @@ for (let i=0; i<correctAnswers.length; i++){
   let status = 0
 for (let i=0; i<correctAnswers.length; i++){
   if (correctAnswers[i].toLowerCase()==candidateAnswers[i].toLowerCase()){
-    grade++;
+    grade+=20;
   } 
 } 
-totalGrade = (grade/correctAnswers.length)*100
-console.log(`>>> Overall Grade: ${totalGrade}% (${grade} of 5 responses correct) <<<`);
+totalGrade = ((grade/20)/correctAnswers.length)*100
+console.log(`>>> Overall Grade: ${totalGrade}% (${(grade/20)} of 5 responses correct) <<<`);
 if (totalGrade>=80){
   status = 'PASSED';
   } else {
